@@ -22,7 +22,7 @@ const CoinCard = ({coin, selectedCurrency, onClick }) => {
           <span className="font-semibold">{coin.name}</span>
         </div>
         <div className="text-right">
-          {/* <p>${coin.current_price.toLocaleString()}</p> */}
+          
           <p>{symbol}{coin.current_price.toLocaleString()}</p>
 
           <p
@@ -42,7 +42,7 @@ const CoinCard = ({coin, selectedCurrency, onClick }) => {
         <svg viewBox="0 0 100 30" className="w-full h-8">
           <polyline
             fill="none"
-            stroke={coin.price_change_percentage_24h > 0 ? "limegreen" : "tomato"}
+            stroke={coin.price_change_percentage_24h > 0 ? "limegreen" : "red"}
             strokeWidth="2"
             points={coin.sparkline_in_7d.price
               .map((p, i) => `${(i / coin.sparkline_in_7d.price.length) * 100},${30 - (p / Math.max(...coin.sparkline_in_7d.price)) * 30}`)

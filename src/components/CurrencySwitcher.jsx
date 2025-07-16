@@ -1,6 +1,7 @@
 import React from "react";
 
 const CurrencySwitcher = ({ setSelectedCurrency }) => {
+    
   const handleChange = (e) => {
     setSelectedCurrency(e.target.value);
   };

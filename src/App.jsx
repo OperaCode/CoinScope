@@ -1,6 +1,6 @@
 import "./App.css";
 import Landing from "./pages/Landing";
-import Home from "./Pages/Home";
+
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/DashBoard";
 import PortfolioTracker from "./components/PortfolioTracker";
@@ -10,7 +10,6 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/portfolio" element={<PortfolioTracker />} />
       </Routes>

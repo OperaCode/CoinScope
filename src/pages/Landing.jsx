@@ -6,13 +6,13 @@ const Landing = () => {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-gray-200">
       {/* Navbar */}
       <header className="p-4">
-        <nav className="flex justify-between items-center px-8 py-4 border-b border-gray-700">
-          <h1 className="text-3xl font-extrabold tracking-wide bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">
+        <nav className="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-wide bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">
             CoinScope
           </h1>
           <Link
             to="/dashboard"
-            className="bg-cyan-500 text-white px-5 py-2 rounded shadow hover:bg-cyan-600 transition"
+            className="bg-cyan-500 text-white px-3 py-2 hover:scale-110 rounded shadow hover:bg-cyan-600 transition"
           >
             Go to Dashboard
           </Link>
@@ -20,7 +20,7 @@ const Landing = () => {
       </header>
 
       {/* Hero Section */}
-      <header className="flex-1 flex flex-col justify-center items-center text-center px-6 py-20 bg-[url('/crypto-bg.svg')] bg-cover bg-center">
+      <main className="flex-1 flex flex-col justify-center items-center text-center px-6 py-20 bg-[url('/crypto-bg.svg')] bg-cover bg-center">
         <h2 className="text-5xl md:text-6xl font-bold mb-4">
           Your Crypto Dashboard, Reimagined
         </h2>
@@ -30,11 +30,11 @@ const Landing = () => {
         </p>
         <Link
           to="/dashboard"
-          className="bg-purple-600 px-8 py-3 rounded shadow hover:bg-purple-700 transition text-white font-semibold"
+          className="bg-purple-600 px-8 py-3 hover:scale-110 rounded shadow hover:bg-purple-700 transition text-white font-semibold"
         >
           Launch CoinScope
         </Link>
-      </header>
+      </main>
 
       {/* Features Section */}
       <section className="py-16 px-6 max-w-6xl mx-auto grid gap-12 md:grid-cols-3 text-center">
@@ -68,7 +68,7 @@ const Landing = () => {
         </h2>
         <Link
           to="/dashboard"
-          className="inline-block bg-black bg-opacity-30 backdrop-blur px-8 py-3 rounded shadow text-white font-semibold hover:bg-opacity-50 transition"
+          className="inline-block bg-black hover:scale-110 bg-opacity-30 backdrop-blur px-8 py-3 rounded shadow text-white font-semibold hover:bg-opacity-50 transition"
         >
           Get Started Now
         </Link>
