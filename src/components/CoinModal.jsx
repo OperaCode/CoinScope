@@ -16,33 +16,49 @@ const CoinModal = ({ coinId, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
-      <div className="bg-gray-900 rounded-lg p-6 max-w-md w-full relative">
+      <div className="bg-gray-900 rounded-2xl p-6 max-w-md w-full relative shadow-lg border border-gray-700">
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-gray-400 hover:text-white"
+          className="absolute top-3 right-3 text-gray-400 hover:text-white text-xl"
         >
           ✕
         </button>
 
-        <div className="flex items-center gap-3 mb-4">
-          <img src={coin.image.small} alt={coin.name} className="w-10 h-10" />
-          <h2 className="text-2xl font-bold">{coin.name}</h2>
+        <div className="flex flex-col items-center gap-3 mb-6">
+          <img src={coin.image.large} alt={coin.name} className="w-16 h-16" />
+          <h2 className="text-3xl font-bold text-center">{coin.name}</h2>
+          <span className="bg-cyan-600/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
+            Rank #{coin.market_cap_rank}
+          </span>
         </div>
 
-        <p><strong>Market Cap:</strong> ${coin.market_data.market_cap.usd.toLocaleString()}</p>
-        <p><strong>Total Supply:</strong> {coin.market_data.total_supply?.toLocaleString() || "N/A"}</p>
-        <p><strong>All-Time High:</strong> ${coin.market_data.ath.usd.toLocaleString()}</p>
-        <p><strong>All-Time Low:</strong> ${coin.market_data.atl.usd.toLocaleString()}</p>
-        <p className="mt-4">
-          <a
-            href={coin.links.homepage[0]}
-            target="_blank"
-            rel="noreferrer"
-            className="text-cyan-400 underline"
-          >
-            Visit Website
-          </a>
-        </p>
+        <div className="space-y-3 text-gray-300">
+          <div className="flex justify-between">
+            <span>💰 Market Cap:</span>
+            <span className="font-semibold">${coin.market_data.market_cap.usd.toLocaleString()}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>🔢 Total Supply:</span>
+            <span className="font-semibold">{coin.market_data.total_supply?.toLocaleString() || "N/A"}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>🔺 All-Time High:</span>
+            <span className="font-semibold">${coin.market_data.ath.usd.toLocaleString()}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>🔻 All-Time Low:</span>
+            <span className="font-semibold">${coin.market_data.atl.usd.toLocaleString()}</span>
+          </div>
+        </div>
+
+        <a
+          href={coin.links.homepage[0]}
+          target="_blank"
+          rel="noreferrer"
+          className="block mt-6 bg-cyan-600 hover:bg-cyan-700 text-white text-center py-2 rounded-lg transition"
+        >
+          Visit Website
+        </a>
       </div>
     </div>
   );
