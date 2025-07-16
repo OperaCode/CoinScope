@@ -1,6 +1,16 @@
 import React from "react";
 
-const CoinCard = ({ coin, onClick }) => {
+const CoinCard = ({coin, selectedCurrency, onClick }) => {
+    const currencySymbols = {
+    usd: "$",
+    eur: "€",
+    ngn: "₦",
+    gbp: "£",
+    jpy: "¥",
+  };
+
+  const symbol = currencySymbols[selectedCurrency] || selectedCurrency.toUpperCase();
+
   return (
     <div
       onClick={onClick}
@@ -12,7 +22,9 @@ const CoinCard = ({ coin, onClick }) => {
           <span className="font-semibold">{coin.name}</span>
         </div>
         <div className="text-right">
-          <p>${coin.current_price.toLocaleString()}</p>
+          {/* <p>${coin.current_price.toLocaleString()}</p> */}
+          <p>{symbol}{coin.current_price.toLocaleString()}</p>
+
           <p
             className={
               coin.price_change_percentage_24h > 0

@@ -6,7 +6,7 @@ const Landing = () => {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-gray-200">
       {/* Navbar */}
       <header className="p-4">
-        <nav className="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+        <nav className="flex justify-between items-center px-8 py-4 border-b border-gray-700">
           <h1 className="text-3xl font-extrabold tracking-wide bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">
             CoinScope
           </h1>
@@ -14,7 +14,7 @@ const Landing = () => {
             to="/dashboard"
             className="bg-cyan-500 text-white px-5 py-2 rounded shadow hover:bg-cyan-600 transition"
           >
-            Dashboard
+            Go to Dashboard
           </Link>
         </nav>
       </header>
@@ -77,7 +77,7 @@ const Landing = () => {
       {/* Footer */}
       <footer className="py-6 text-center border-t border-gray-700 mt-auto">
         <p className="text-gray-500">
-          © {new Date().getFullYear()} CoinScope – Built with ❤️ by Raphael.
+          © {new Date().getFullYear()} CoinScope – Built with ❤️ by Opera.
           Powered by CoinGecko API.
         </p>
       </footer>

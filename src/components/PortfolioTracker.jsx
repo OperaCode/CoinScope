@@ -57,8 +57,8 @@ const PortfolioTracker = () => {
   };
 
   return (
-    <div className="bg-gray-800 rounded p-6 shadow mt-10">
-      <h2 className="text-2xl font-bold mb-4">📊 Portfolio Tracker</h2>
+    <div className="bg-gray-800 rounded p-6 shadow mt-10 ">
+      <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">My Assets</h2>
 
       {loading ? (
         <p>Loading...</p>
